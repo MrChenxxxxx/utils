@@ -11,8 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.skylele.myapplication.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.skylele.myapplication.widget.MoneyEditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:hint="请输入金额"
+        android:inputType="numberDecimal"/>
 </RelativeLayout>
