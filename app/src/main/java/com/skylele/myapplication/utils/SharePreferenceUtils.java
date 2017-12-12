@@ -16,7 +16,7 @@ import java.io.StreamCorruptedException;
  */
 
 public class SharePreferenceUtils {
-    private static final String SHARE_PREFS_NAME = "com.skylel.app";
+    private static final String SHARE_PREFS_NAME = "com.skylele.app";
 
     private static SharedPreferences getPreferences() {
         return MyApplication.instance.getSharedPreferences(SHARE_PREFS_NAME, Context.MODE_PRIVATE);
