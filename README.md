@@ -14,6 +14,13 @@
           android:layout_height="wrap_content"
           android:hint="请输入金额"
           android:inputType="numberDecimal"/>
+
+###2、BillItemView
+>两个TextView并排的类
+
+知识点：
+ declare-styleable format="enum" 的使用
+	
 	
 ## 二、util
 > 工具类

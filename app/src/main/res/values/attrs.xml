@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BillItemView">
+        <attr name="biv_contentSize" format="dimension"></attr>
+        <attr name="biv_leftSize" format="dimension"></attr>
+        <attr name="biv_rightSize" format="dimension"></attr>
+        <attr name="biv_leftColor" format="color"></attr>
+        <attr name="biv_rightColor" format="color"></attr>
+        <attr name="biv_leftText" format="string"></attr>
+        <attr name="biv_rightText" format="string"></attr>
+        <attr name="biv_leftWeight" format="float"></attr>
+        <attr name="biv_rightWeight" format="float"></attr>
+
+        <attr name="biv_leftGravity" format="enum">
+            <enum name="center" value="17"/>
+            <enum name="top" value="48"/>
+            <enum name="bottom" value="80"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+            <enum name="center_horizontal" value="1"/>
+            <enum name="center_vertical" value="16"/>
+        </attr>
+        <attr name="biv_rightGravity" format="enum">
+            <enum name="center" value="17"/>
+            <enum name="top" value="48"/>
+            <enum name="bottom" value="80"/>
+            <enum name="left" value="3"/>
+            <enum name="right" value="5"/>
+            <enum name="center_horizontal" value="1"/>
+            <enum name="center_vertical" value="16"/>
+        </attr>
+    </declare-styleable>
+</resources>
