@@ -31,8 +31,8 @@
     <com.skylele.myapplication.widget.BillItemView
         biv:biv_contentSize="16sp"
         biv:biv_leftText="我的"
-        biv:biv_leftWeight="0.5"
         biv:biv_rightGravity="left"
+        biv:biv_leftWeight="3"
         biv:biv_rightText="右边"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

@@ -30,4 +30,7 @@
             <enum name="center_vertical" value="16"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="EmptyRecycleView">
+        <attr name="erv_empty_view" format="reference"></attr>
+    </declare-styleable>
 </resources>
