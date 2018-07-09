@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
     <Button
+        android:text="btn"
         android:id="@+id/btn_vp_transformer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

@@ -1,16 +1,24 @@
 package com.skylele.myapplication.activity;
 
 import android.app.Activity;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 import com.skylele.myapplication.R;
+import com.skylele.myapplication.widget.popWindow.MyPopupWindow;
+import com.skylele.myapplication.widget.popWindow.MyPopupWindow1;
 import com.skylele.myapplication.widget.viewpage.DepthPageTransformer;
 import com.skylele.myapplication.widget.viewpage.RotateDownPageTransformer;
 import com.skylele.myapplication.widget.viewpage.ZoomOutPageTransformer;
@@ -40,7 +48,14 @@ public class WidgetUseActivity extends Activity {
         findViewById(R.id.btn_vp_transformer).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changerViewpagerTransformer();
+//                changerViewpagerTransformer();
+//                MyPopupWindow popupWindow = new MyPopupWindow(WidgetUseActivity.this);
+//                popupWindow.showAsDropDown(view);
+//                popupWindow.showAtLocation(findViewById(R.id.title), Gravity.NO_GRAVITY, 0, 0);
+
+//                bottomwindow(view);
+
+                showMyPopupWindow(view);
             }
         });
 
@@ -77,6 +92,11 @@ public class WidgetUseActivity extends Activity {
         mViewPager.setPageTransformer(true, new RotateDownPageTransformer());
     }
 
+    private void showMyPopupWindow(View view) {
+        MyPopupWindow1 popupWindow = new MyPopupWindow1(WidgetUseActivity.this);
+        popupWindow.showAtLocation(view,Gravity.BOTTOM|Gravity.CENTER_VERTICAL,0,0);
+    }
+
     boolean vpTransformer = false;
 
     private void changerViewpagerTransformer() {
@@ -97,5 +117,86 @@ public class WidgetUseActivity extends Activity {
             imageView.setImageResource(imgId);
             mImageViews.add(imageView);
         }
+    }
+
+    PopupWindow popupWindow;
+
+    void bottomwindow(View view) {
+        if (popupWindow != null && popupWindow.isShowing()) {
+            return;
+        }
+        LinearLayout layout = (LinearLayout) getLayoutInflater().inflate(R.layout.view_window_popup, null);
+        popupWindow = new PopupWindow(layout,
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        //点击空白处时，隐藏掉pop窗口
+        popupWindow.setFocusable(true);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        //添加弹出、弹入的动画
+        popupWindow.setAnimationStyle(R.style.Popupwindow);
+//        int[] location = new int[2];
+//        view.getLocationOnScreen(location);
+//        popupWindow.showAtLocation(view, Gravity.LEFT | Gravity.BOTTOM, 0, -location[1]);
+        popupWindow.showAtLocation(view, Gravity.LEFT | Gravity.BOTTOM, 0,0);
+        //添加按键事件监听
+        setButtonListeners(layout);
+        //添加pop窗口关闭事件，主要是实现关闭时改变背景的透明度
+//        popupWindow.setOnDismissListener(new poponDismissListener());
+        backgroundAlpha(0.3f);
+    }
+
+    private void setButtonListeners(LinearLayout layout) {
+        Button camera = (Button) layout.findViewById(R.id.camera);
+        Button gallery = (Button) layout.findViewById(R.id.gallery);
+        Button savepicture = (Button) layout.findViewById(R.id.savepicture);
+        Button cancel = (Button) layout.findViewById(R.id.cancel);
+
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (popupWindow != null && popupWindow.isShowing()) {
+                    //在此处添加你的按键处理 xxx
+                    popupWindow.dismiss();
+                }
+            }
+        });
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (popupWindow != null && popupWindow.isShowing()) {
+                    //在此处添加你的按键处理 xxx
+                    popupWindow.dismiss();
+                }
+            }
+        });
+        savepicture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (popupWindow != null && popupWindow.isShowing()) {
+                    //在此处添加你的按键处理 xxx
+                    popupWindow.dismiss();
+                }
+            }
+        });
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (popupWindow != null && popupWindow.isShowing()) {
+                    popupWindow.dismiss();
+                }
+            }
+        });
+    }
+
+    /**
+     * 设置添加屏幕的背景透明度
+     * @param bgAlpha
+     */
+    public void backgroundAlpha(float bgAlpha)
+    {
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.alpha = bgAlpha; //0.0-1.0
+        getWindow().setAttributes(lp);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
     }
 }

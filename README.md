@@ -21,6 +21,25 @@
 知识点：
  declare-styleable format="enum" 的使用
 	
+###3、 EmptyRecycleView
+>带有空布局的RecycleView，不是真正的recycleView，如果要用到recycleView方法这里没有，可以新增方法进行透传
+
+添加空布局的方法：
+
+		1、此方法可以动态添加要显示的空布局
+		public void setEmptyView(View emptyView)
+		2、把空布局配置到erv_empty_view 这个属性中
+		 <com.skylele.myapplication.widget.EmptyRecycleView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                cxg:erv_empty_view="@layout/view_empty"/>
+
+###4、 popupWindow
+    1、基本用法
+    2、自定义popupWindow
+    参考 https://www.cnblogs.com/jzyhywxz/p/7039503.html
+
 	
 ## 二、util
 > 工具类
