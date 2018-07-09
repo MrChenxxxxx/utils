@@ -12,25 +12,38 @@
         <attr name="biv_rightWeight" format="float"></attr>
 
         <attr name="biv_leftGravity" format="enum">
-            <enum name="center" value="17"/>
-            <enum name="top" value="48"/>
-            <enum name="bottom" value="80"/>
-            <enum name="left" value="3"/>
-            <enum name="right" value="5"/>
-            <enum name="center_horizontal" value="1"/>
-            <enum name="center_vertical" value="16"/>
+            <enum name="center" value="17" />
+            <enum name="top" value="48" />
+            <enum name="bottom" value="80" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+            <enum name="center_horizontal" value="1" />
+            <enum name="center_vertical" value="16" />
         </attr>
         <attr name="biv_rightGravity" format="enum">
-            <enum name="center" value="17"/>
-            <enum name="top" value="48"/>
-            <enum name="bottom" value="80"/>
-            <enum name="left" value="3"/>
-            <enum name="right" value="5"/>
-            <enum name="center_horizontal" value="1"/>
-            <enum name="center_vertical" value="16"/>
+            <enum name="center" value="17" />
+            <enum name="top" value="48" />
+            <enum name="bottom" value="80" />
+            <enum name="left" value="3" />
+            <enum name="right" value="5" />
+            <enum name="center_horizontal" value="1" />
+            <enum name="center_vertical" value="16" />
         </attr>
     </declare-styleable>
     <declare-styleable name="EmptyRecycleView">
         <attr name="erv_empty_view" format="reference"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="QuotaManagerItemView">
+        <attr name="qmi_title" format="string|reference" />
+        <attr name="qmi_content" format="reference|string" />
+        <attr name="qmi_icon_color" format="color|reference" />
+        <attr name="qmi_title_color" format="color|reference" />
+        <attr name="qmi_content_color" format="color|reference" />
+        <attr name="qmi_icon_radius" format="dimension|integer" />
+        <attr name="qmi_title_size" format="dimension|integer" />
+        <attr name="qmi_content_size" format="dimension|integer" />
+        <attr name="qmi_icon_marginRight" format="dimension|integer" />
+        <attr name="qmi_content_marginTop" format="dimension|integer" />
     </declare-styleable>
 </resources>

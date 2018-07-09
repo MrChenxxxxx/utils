@@ -36,4 +36,14 @@
         biv:biv_rightText="右边"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+    <Button
+        android:text="seekBar"
+        android:id="@+id/btn_seekbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="widget_use_activity"
+        android:id="@+id/btn_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

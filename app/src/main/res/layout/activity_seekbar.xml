@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:maxHeight="3dp"
+        android:minHeight="3dp"
+        android:thumb="@drawable/btn_tie_pop"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/seekbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.skylele.myapplication.widget.DemoView
+        app:qmi_title = "扫码单日最高"
+        app:qmi_content = "￥72000.00"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>
