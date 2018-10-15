@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:biv="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.skylele.myapplication.MainActivity"
-    xmlns:biv="http://schemas.android.com/apk/res-auto">
+    tools:context="com.skylele.myapplication.MainActivity">
 
     <com.skylele.myapplication.widget.MoneyEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入金额"
-        android:inputType="numberDecimal"/>
+        android:inputType="numberDecimal" />
+
     <TextView
         android:id="@+id/tv1"
-        android:text="我的门戈45abc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="我的门戈45abc" />
+
     <TextView
         android:id="@+id/tv2"
-        android:text="我c的门戈45abc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="我c的门戈45abc" />
+
     <com.skylele.myapplication.widget.BillItemView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         biv:biv_contentSize="16sp"
         biv:biv_leftText="我的"
-        biv:biv_rightGravity="left"
         biv:biv_leftWeight="3"
-        biv:biv_rightText="右边"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        biv:biv_rightGravity="left"
+        biv:biv_rightText="右边" />
+
     <Button
-        android:text="seekBar"
         android:id="@+id/btn_seekbar"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="seekBar" />
+
     <Button
-        android:text="widget_use_activity"
         android:id="@+id/btn_widget"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="widget_use_activity" />
+
+    <com.skylele.myapplication.widget.password.PayPwdEditText
+        android:id="@+id/ppet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
 </LinearLayout>

@@ -40,6 +40,13 @@
     2、自定义popupWindow
     参考 https://www.cnblogs.com/jzyhywxz/p/7039503.html
 
+###5、 AbstractPayPwdEditText 显示支付密码框
+
+
+> PayPwdEditText 这个是它的子类
+	
+	包含功能，通过覆写 normalView()、checkView() 用户可以自行设置默认的页面和填充布局
+
 	
 ## 二、util
 > 工具类
